@@ -10,6 +10,6 @@ test('root route', function () {
     andThen(function () {
       var current_route =
       DeluciaEmber.__container__.lookup('controller:application').currentRouteName;
-      equal(current_route, '', 'Expected ****** got: ' + current_route);
+      equal(current_route, 'index', 'Expected index got: ' + current_route);
     });
 });

@@ -4,4 +4,9 @@
 //= require ember
 //= require ember-data
 //= require ember-application
+
+<% if Rails.env.development? %>
+  Ember.LOG_TRANSITIONS = true;
+<% end %>
+
 //= require_tree .

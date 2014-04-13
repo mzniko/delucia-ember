@@ -1,6 +1,6 @@
 class Api::V1::CustomersController < ApplicationController
   def index
-    @customers = Customers.all
+    @customers = Customer.all
     render json: @customers
   end
 end

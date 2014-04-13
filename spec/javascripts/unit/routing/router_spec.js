@@ -15,15 +15,15 @@ test('root route', function () {
 });
 
 test('customers route', function () {
-    visit('/contacts');
+    visit('/customers');
     andThen(function () {
       var current_route =
       DeluciaEmber.__container__.lookup('controller:application').currentRouteName;
-      equal(current_route, 'contacts', 'Expected contacts got: ' + current_route);
+      equal(current_route, 'customers', 'Expected customers got: ' + current_route);
     });
 });
 
-test('customers route', function () {
+test('sessions route', function () {
     visit('/sessions');
     andThen(function () {
       var current_route =

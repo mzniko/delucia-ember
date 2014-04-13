@@ -4,13 +4,13 @@ module('Customers integration', {
     DeluciaEmber.Customer.FIXTURES = [
               {
                   id: 1,
-                  first_name: 'Newguy',
-                  last_name: 'McSouthEast'
+                  name: 'Newguy McSouthEast',
+                  email: 'McSouthEast@email.com'
               },
               {
                   id: 2,
-                  first_name: 'Newgirl',
-                  last_name: 'MacPearlDistrict'
+                  name: 'Newgirl MacPearlDistrict',
+                  email: 'MacPearlDistrict@email.com'
             }
           ]
   },

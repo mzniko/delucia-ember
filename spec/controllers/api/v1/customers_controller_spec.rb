@@ -6,7 +6,7 @@ describe Api::V1::CustomersController do
       @customers = FactoryGirl.create_list(:customer, 2)
       get :index
       expect(assigns(:customers).length).to eq(2)
-      expect(assigns(:contacts)[0].class).to be(Customer)
+      expect(assigns(:customers)[0].class).to be(Customer)
     end
 
     it 'show' do

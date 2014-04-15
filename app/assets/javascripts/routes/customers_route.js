@@ -1,5 +1,5 @@
 DeluciaEmber.CustomersRoute = Ember.Route.Extend({
-  model: function () {
+  model: function() {
     return this.store.find('customer');
   }
 });

@@ -1,7 +1,7 @@
 <h3 class="customers_heading">Now in the Customers Index</h3>
 <ul class="contacts_list">
      {{#each customer in controller}}
-       <li>Name: {{name}}</li>
-       <li>Email: {{email}}</li>
+       <li>Name: {{customer.name}}</li>
+       <li>Email: {{customer.email}}</li>
      {{/each}}
 </ul>

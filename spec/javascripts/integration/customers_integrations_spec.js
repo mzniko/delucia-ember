@@ -32,7 +32,7 @@ test('Renders customers', function () {
     visit('/customers');
     andThen(function () {
         var contacts_length = find('.contacts_list li').length;
-        equal(contacts_length, 2,
+        equal(contacts_length, 4,
         "Expected customers to contain 2 items, got: " + contacts_length);
     });
 });

@@ -1,1 +1,8 @@
 <h3 class="sessions_heading">Now in the Sessions Index</h3>
+<ul class="sessions_list">
+     {{#each session in controller}}
+       <li>Customer Name: {{session.customer}}</li>
+       <li>Day: {{session.day}}</li>
+       <li>Notes: {{session.notes}}</li>
+     {{/each}}
+</ul>

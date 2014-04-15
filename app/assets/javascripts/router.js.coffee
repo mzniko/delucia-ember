@@ -1,5 +1,5 @@
 # For more information see: http://emberjs.com/guides/routing/
 
-DeluciaEmber.Router.map ->
+DeluciaEmber.Router.map () ->
   @resource 'customers'
   @resource 'sessions'

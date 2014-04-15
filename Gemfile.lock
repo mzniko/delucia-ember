@@ -29,7 +29,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
-    arel (5.0.0)
+    arel (5.0.1.20140414130214)
     barber (0.4.2)
       ember-source
       execjs
@@ -108,7 +108,7 @@ GEM
       treetop (~> 1.4.8)
     method_source (0.8.2)
     mime-types (1.25.1)
-    minitest (5.3.2)
+    minitest (5.3.3)
     multi_json (1.9.2)
     nio4r (1.0.0)
     polyglot (0.3.4)

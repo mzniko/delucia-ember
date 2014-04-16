@@ -1,0 +1,13 @@
+{{#if isEditing}}
+  {{partial 'sessions/edit'}}
+  <button {{action 'doneEditing'}}>Done</button>
+{{else}}
+  <button {{action 'edit'}}>Edit</button>
+{{/if}}
+
+<ul class="sessions_list">
+  <li>Customer Name: {{customer}}</li>
+  <li>Day: {{day}}</li>
+  <li>Notes: {{notes}}</li>
+</ul>
+

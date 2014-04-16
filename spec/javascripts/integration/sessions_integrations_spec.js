@@ -35,6 +35,15 @@ test('Renders sessions', function () {
     andThen(function () {
         var sessions_length = find('.sessions_list li').length;
         equal(sessions_length, 6,
-        "Expected sessions to contain 2 items, got: " + sessions_length);
+        "Expected sessions to contain 6 items, got: " + sessions_length);
+    });
+});
+
+test('Renders a single session', function () {
+    visit('/sessions/1');
+    andThen(function () {
+        var sessions_length = find('.sessions_list li').length;
+        equal(sessions_length, 3,
+        "Expected sessions to contain 3 items, got: " + sessions_length);
     });
 });

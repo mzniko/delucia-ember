@@ -33,6 +33,15 @@ test('Renders customers', function () {
     andThen(function () {
         var customers_length = find('.customers_list li').length;
         equal(customers_length, 4,
+        "Expected customers to contain 4 items, got: " + customers_length);
+    });
+});
+
+test('Renders a single customer', function () {
+    visit('/customers/1');
+    andThen(function () {
+        var customers_length = find('.customers_list li').length;
+        equal(customers_length, 2,
         "Expected customers to contain 2 items, got: " + customers_length);
     });
 });

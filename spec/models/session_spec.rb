@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Customer do
+describe Session do
   let (:session) {FactoryGirl.build_stubbed(:session)}
 
   subject { session }

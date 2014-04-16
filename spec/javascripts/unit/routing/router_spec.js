@@ -1,26 +1,18 @@
+//= require support/test_helper
+
 module('Routing specs', {
-     setup: function () { },
+     setup: function () {},
      teardown: function () {
      DeluciaEmber.reset();
     }
 });
 
 test('root route', function () {
-    visit('/');
-    andThen(function () {
-      var current_route =
-      DeluciaEmber.__container__.lookup('controller:application').currentRouteName;
-      equal(current_route, 'index', 'Expected index got: ' + current_route);
-    });
+    routesTo('/', 'index');
 });
 
 test('customers route', function () {
-    visit('/customers');
-    andThen(function () {
-      var current_route =
-      DeluciaEmber.__container__.lookup('controller:application').currentRouteName;
-      equal(current_route, 'customers', 'Expected customers got: ' + current_route);
-    });
+    routesTo('/customers', 'customers');
 });
 
 test('sessions route', function () {
@@ -30,4 +22,12 @@ test('sessions route', function () {
       DeluciaEmber.__container__.lookup('controller:application').currentRouteName;
       equal(current_route, 'sessions', 'Expected sessions got: ' + current_route);
     });
+});
+
+test('individual customer', function () {
+    routesTo('/customers/1', 'customers.show');
+});
+
+test('individual session', function () {
+    routesTo('/sessions/1', 'sessions.show');
 });

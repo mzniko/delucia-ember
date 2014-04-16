@@ -12,7 +12,7 @@ test('root route', function () {
 });
 
 test('customers route', function () {
-    routesTo('/customers', 'customers');
+    routesTo('/customers', 'customers.index');
 });
 
 test('sessions route', function () {
@@ -20,7 +20,7 @@ test('sessions route', function () {
     andThen(function () {
       var current_route =
       DeluciaEmber.__container__.lookup('controller:application').currentRouteName;
-      equal(current_route, 'sessions', 'Expected sessions got: ' + current_route);
+      equal(current_route, 'sessions.index', 'Expected sessions got: ' + current_route);
     });
 });
 

@@ -4,8 +4,8 @@ DeluciaEmber.ApplicationController = Ember.ArrayController.extend({
       this.toggleProperty('addingNewCustomer');
     },
     saveNewCustomer: function () {
-      this.new_name = this.get('new_name')
-      this.new_email = this.get('new_email')
+      var new_name = this.get('new_name');
+      var new_email = this.get('new_email');
 
       var new_customer = this.store.createRecord('customer', {
         name: new_name,
@@ -16,7 +16,7 @@ DeluciaEmber.ApplicationController = Ember.ArrayController.extend({
       new_customer.save().then(
         function () {
           self.set('new_name', '');
-          self.set('new_name', '');
+          self.set('new_email', '');
           self.toggleProperty('addingNewCustomer');
         },
         function () { alert('Unable to save record');

@@ -1,4 +1,4 @@
-DeluciaEmber.ApplicationController = Ember.ArrayController.extend({
+DeluciaEmber.IndexController = Ember.ArrayController.extend({
   actions: {
     addNewCustomer: function () {
       this.toggleProperty('addingNewCustomer');
@@ -26,6 +26,9 @@ DeluciaEmber.ApplicationController = Ember.ArrayController.extend({
       this.set('new_name', '');
       this.set('new_email', '');
       this.toggleProperty('addingNewCustomer');
+    },
+    status: function () {
+      this.transitionTo('/status');
     }
   }
 });

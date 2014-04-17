@@ -15,4 +15,11 @@ describe Api::V1::CustomersController do
       expect(assigns(:customer).name).to eq('MyString')
     end
   end
+
+  describe 'POST methods' do
+    it 'creates a new customer' do
+      @customer = FactoryGirl.attributes_for(:customer)
+      expect{post :create, customer: @customer}.to change(Customer, :count).by(1)
+    end
+  end
 end

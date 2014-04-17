@@ -10,9 +10,22 @@ class Api::V1::CustomersController < ApplicationController
     render json: @customer
   end
 
+  def create
+    @customer = Customer.new(get_customer_params)
+    if @customer.save
+      render json: @customer
+    else
+      render json: @customer.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def set_customer
     @customer = Customer.find(params[:id])
+  end
+
+  def get_customer_params
+    params.require(:customer).permit([:name, :email])
   end
 end

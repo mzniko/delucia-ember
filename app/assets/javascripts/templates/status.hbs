@@ -1,3 +1,15 @@
 <h2 class="status_heading">This is the Status page</h2>
 <p>{{#link-to 'sessions'}}Sessions{{/link-to}}</p>
+
+<button {{action 'sessionsShowing'}}>Sessions</button>
+
+{{#if sessionsShowing}}
+{{partial 'sessions/status'}}
+{{/if}}
+
 <p>{{#link-to 'customers'}}Customers{{/link-to}}</p>
+<button {{action 'customersShowing'}}>Customers</button>
+
+{{#if customersShowing}}
+{{partial 'customers/status'}}
+{{/if}}

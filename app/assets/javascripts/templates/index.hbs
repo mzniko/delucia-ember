@@ -1,15 +1,25 @@
-<button {{action 'status'}}>Status</button>
-<button {{action 'home'}}>Home</button>
-
-{{#if addingNewCustomer}}
-  <label for="new_name">Name</label>
-  {{input type ='text' value=controller.new_name id='new_name'}}
-  <label for="new_email">Email</label>
-  {{input type ='text' value=controller.new_email id='new_email'}}
-  <button id="save_new_customer" {{action 'saveNewCustomer'}} >Save</button>
-  <button id="cancel_new_customer"{{action 'cancelNewCustomer'}}>Cancel</button>
-{{else}}
-  <button id="new_customer" {{action 'addNewCustomer'}}>New Customer</button>
-{{/if}}
+{{!-- <button {{action 'status'}}>Status</button>
+<button {{action 'home'}}>Home</button> --}}
+<div id="main-image">
+          <div class="row">
+            <div class="small-3 small-centered columns" id="main-title">
+              <!-- <h1><strong>Delucia Boxing</strong><h1> -->
+            </div>
+          <div class="row">
+            <div class="small-3 small-centered columns" id="center-button">
+              {{#if addingNewCustomer}}
+                <label id="nc_label" for="new_name">Name</label>
+                {{input type ='text' value=controller.new_name id='new_name'}}
+                <label id="nc_label" for="new_email">Email</label>
+                {{input type ='text' value=controller.new_email id='new_email'}}
+                <button id="save_new_customer" {{action 'saveNewCustomer'}}>Save</button>
+                <button id="cancel_new_customer"{{action 'cancelNewCustomer'}}>Cancel</button>
+              {{else}}
+                <button class="button small-centered" id="new_customer" {{action 'addNewCustomer'}}>Get Started</button>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+</div>
 
 {{outlet}}

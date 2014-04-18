@@ -10,9 +10,22 @@ class Api::V1::SessionsController < ApplicationController
     render json: @session
   end
 
+  def create
+    @session = Session.new(get_session_params)
+    if @session.save
+      render json: @session
+    else
+      render json: @session.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def set_session
     @session = Session.find(params[:id])
+  end
+
+  def get_session_params
+    params.require(:session).permit([:customer, :day, :notes])
   end
 end

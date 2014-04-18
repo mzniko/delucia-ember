@@ -8,6 +8,9 @@ DeluciaEmber.SessionsShowController = Ember.ObjectController.extend ({
 
     doneEditing: function() {
       this.set('isEditing', false);
+    },
+    cancelEditing: function() {
+      this.set('isEditing', false);
     }
   }
 });

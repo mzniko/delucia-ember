@@ -63,8 +63,9 @@ test('Add a new customer', function () {
   click('#save_new_customer');
   andThen(function () {
     visit('/customers');
-    var name = find('.customers_list:contains("Newbie Boxer")').length;
-    ok(name == 1, "Customer was not saved");
+    var customer = find('.customer_name').text();
+    equal(customer, "Name: Newbie Boxer",
+    "Customer was not saved, got: " + customer);
   });
 });
 

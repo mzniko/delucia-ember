@@ -2,7 +2,7 @@
 
 <ul class="customers_list">
      {{#each customer in controller}}
-       <li>{{#link-to 'customers.show' customer.id}}Name:{{/link-to}} {{customer.name}}</li>
-       <li>Email: {{customer.email}}</li>
+       <li class="customer_name">{{#link-to 'customers.show' customer.id}}Name:{{/link-to}} {{customer.name}}</li>
+       <li class="customer_email">Email: {{customer.email}}</li>
      {{/each}}
 </ul>

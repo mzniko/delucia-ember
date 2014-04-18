@@ -1,0 +1,19 @@
+<h2 class="home_heading">This is the customer Home page</h2>
+
+{{#if addingNewSession}}
+  <label for="new_day">Day</label>
+  {{input type ='date' value=controller.new_name id='new_day'}}
+  <label for="new_notes">Notes</label>
+  {{textarea value=controller.new_notes id='new_notes'}}
+  <button id="save_new_session" {{action 'saveNewSession'}} >Save</button>
+  <button id="cancel_new_session"{{action 'cancelNewSession'}}>Cancel</button>
+{{else}}
+  <button id="new_session" {{action 'addNewSession'}}>New Session</button>
+{{/if}}
+
+<ul class='sessions_list'><h3>Here are your upcoming sessions:</h3>
+  {{#each session in controller}}
+  <li>Date:{{session.day}}</li>
+  <li>Notes:{{session.notes}}</li>
+  {{/each}}
+</ul>

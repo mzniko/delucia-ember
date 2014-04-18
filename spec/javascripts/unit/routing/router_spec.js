@@ -11,6 +11,14 @@ test('root route', function () {
     routesTo('/', 'index');
 });
 
+test('status route', function () {
+    routesTo('/status', 'status');
+});
+
+test('home route', function () {
+    routesTo('/home', 'home');
+});
+
 test('customers route', function () {
     routesTo('/customers', 'customers.index');
 });

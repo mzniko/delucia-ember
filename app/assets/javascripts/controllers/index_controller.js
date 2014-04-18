@@ -18,6 +18,7 @@ DeluciaEmber.IndexController = Ember.ArrayController.extend({
           self.set('new_name', '');
           self.set('new_email', '');
           self.toggleProperty('addingNewCustomer');
+          self.transitionToRoute('/home')
         },
         function () { alert('Unable to save record');
         });
@@ -28,7 +29,10 @@ DeluciaEmber.IndexController = Ember.ArrayController.extend({
       this.toggleProperty('addingNewCustomer');
     },
     status: function () {
-      this.transitionTo('/status');
+      this.transitionToRoute('/status');
+    },
+    home: function () {
+      this.transitionToRoute('/home');
     }
   }
 });

@@ -15,4 +15,10 @@ describe Api::V1::SessionsController do
       expect(assigns(:session).customer).to eq('MyString')
     end
   end
+
+  describe 'POST methods' do
+    it 'creates a new session' do
+      @session = FactoryGirl.attributes_for(:session)
+      expect{post :create, session: @session}.to change(Session, :count).by(1)
+    end
 end

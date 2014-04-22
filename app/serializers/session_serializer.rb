@@ -1,3 +1,3 @@
 class SessionSerializer < ActiveModel::Serializer
-  attributes :id, :day, :customer, :notes
+  attributes :id, :customer_id, :day, :notes
 end

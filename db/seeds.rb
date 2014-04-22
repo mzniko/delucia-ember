@@ -8,5 +8,5 @@
 
 Customer.create(name: 'Customer1', email: 'Customer1@mail.com')
 Customer.create(name: 'Customer2', email: 'Customer2@mail.com')
-Session.create(day: 'MyDate', customer_id: 1, notes: 'MyNotes')
-Session.create(day: 'MyDate2', customer_id: 2, notes: 'MyNotes2')
+Session.create(day: '2014/01/01', customer_id: 1, notes: 'MyNotes')
+Session.create(day: '2014/01/02', customer_id: 2, notes: 'MyNotes2')

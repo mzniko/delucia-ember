@@ -8,11 +8,11 @@ module ('Sessions Model', {
 });
 
 test('Has customer property', function () {
-  has('Session', 'customer', 'string');
+  has('Session', 'customer_id', 'number');
 });
 
 test('Has day property', function () {
-  has('Session', 'day', 'string');
+  has('Session', 'day', 'date');
 });
 
 test('Has notes property', function () {

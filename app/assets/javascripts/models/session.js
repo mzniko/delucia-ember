@@ -1,5 +1,5 @@
 DeluciaEmber.Session = DS.Model.extend({
-     day: DS.attr('string'),
-     customer: DS.attr('string'),
+     customer_id: DS.attr('number'),
+     day: DS.attr('date'),
      notes: DS.attr('string')
 });

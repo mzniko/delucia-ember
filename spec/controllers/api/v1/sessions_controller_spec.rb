@@ -21,4 +21,5 @@ describe Api::V1::SessionsController do
       @session = FactoryGirl.attributes_for(:session)
       expect{post :create, session: @session}.to change(Session, :count).by(1)
     end
+  end
 end

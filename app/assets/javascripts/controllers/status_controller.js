@@ -1,7 +1,7 @@
 DeluciaEmber.StatusController = Ember.ArrayController.extend({
   actions: {
-    sessionsShowing: function () {
-      this.toggleProperty('sessionsShowing');
+    appointmentsShowing: function () {
+      this.toggleProperty('appointmentsShowing');
     },
     customersShowing: function () {
       this.toggleProperty('customersShowing');

@@ -1,13 +1,13 @@
 {{#if isEditing}}
-  {{partial 'sessions/edit'}}
+  {{partial 'appointments/edit'}}
   <button {{action 'doneEditing'}}>Done</button>
   <button id="cancel_customer_edit"{{action 'cancelEditing'}}>Cancel</button>
 {{else}}
   <button {{action 'edit'}}>Edit</button>
 {{/if}}
 
-<ul class="sessions_list">
-  <li>Customer Name: {{customer}}</li>
+<ul class="appointments_list">
+  <li>Customer: {{customer_id}}</li>
   <li>Day: {{day}}</li>
   <li>Notes: {{notes}}</li>
 </ul>

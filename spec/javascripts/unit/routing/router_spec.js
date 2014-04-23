@@ -23,12 +23,12 @@ test('customers route', function () {
     routesTo('/customers', 'customers.index');
 });
 
-test('sessions route', function () {
-    visit('/sessions');
+test('appointments route', function () {
+    visit('/appointments');
     andThen(function () {
       var current_route =
       DeluciaEmber.__container__.lookup('controller:application').currentRouteName;
-      equal(current_route, 'sessions.index', 'Expected sessions got: ' + current_route);
+      equal(current_route, 'appointments.index', 'Expected appointments got: ' + current_route);
     });
 });
 
@@ -36,6 +36,6 @@ test('individual customer', function () {
     routesTo('/customers/1', 'customers.show');
 });
 
-test('individual session', function () {
-    routesTo('/sessions/1', 'sessions.show');
+test('individual appointment', function () {
+    routesTo('/appointments/1', 'appointments.show');
 });

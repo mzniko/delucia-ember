@@ -1,32 +1,32 @@
 DeluciaEmber.HomeController = Ember.ArrayController.extend({
   actions: {
-    addNewSession: function () {
-      this.toggleProperty('addingNewSession');
+    addNewAppointment: function () {
+      this.toggleProperty('addingNewAppointment');
     },
-    saveNewSession: function () {
+    saveNewAppointment: function () {
       var new_day = this.get('new_day');
       var new_notes = this.get('new_notes');
 
-      var new_session = this.store.createRecord('session', {
+      var new_appointment = this.store.createRecord('appointment', {
         customer: 'current_customer',
         day: new_day,
         notes: new_notes
       });
 
       var self = this;
-      new_session.save().then(
+      new_appointment.save().then(
         function () {
           self.set('new_day', '');
           self.set('new_notes', '');
-          self.toggleProperty('addingNewSession');
+          self.toggleProperty('addingNewAppointment');
         },
         function () { alert('Unable to save record');
         });
     },
-    cancelNewSession: function () {
+    cancelNewAppointment: function () {
       this.set('new_day', '');
       this.set('new_notes', '');
-      this.toggleProperty('addingNewSession');
+      this.toggleProperty('addingNewAppointment');
     }
   }
 })

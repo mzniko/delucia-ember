@@ -1,6 +1,6 @@
 //= require support/test_helper
 
-module ('Sessions Model', {
+module ('Appointments Model', {
   setup: function () {},
   teardown: function () {
     DeluciaEmber.reset();
@@ -8,13 +8,13 @@ module ('Sessions Model', {
 });
 
 test('Has customer property', function () {
-  has('Session', 'customer_id', 'number');
+  has('Appointment', 'customer_id', 'number');
 });
 
 test('Has day property', function () {
-  has('Session', 'day', 'date');
+  has('Appointment', 'day', 'date');
 });
 
 test('Has notes property', function () {
-  has('Session', 'notes', 'string');
+  has('Appointment', 'notes', 'string');
 });

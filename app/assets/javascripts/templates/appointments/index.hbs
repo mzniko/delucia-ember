@@ -1,0 +1,8 @@
+<h3 class="appointments_heading">Now in the Appointments Index</h3>
+<ul class="appointments_list">
+     {{#each appointment in controller}}
+       <li>{{#link-to 'appointments.show' appointment.id}}Customer:{{/link-to}} {{appointment.customer_id}}</li>
+       <li>Day: {{appointment.day}}</li>
+       <li>Notes: {{appointment.notes}}</li>
+     {{/each}}
+</ul>

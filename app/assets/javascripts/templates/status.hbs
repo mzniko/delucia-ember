@@ -1,10 +1,10 @@
 <h2 class="status_heading">This is the Status page</h2>
-<p>{{#link-to 'sessions'}}Sessions{{/link-to}}</p>
+<p>{{#link-to 'appointments'}}Appointments{{/link-to}}</p>
 
-<button {{action 'sessionsShowing'}}>Sessions</button>
+<button {{action 'appointmentsShowing'}}>Appointments</button>
 
-{{#if sessionsShowing}}
-{{partial 'sessions/status'}}
+{{#if appointmentsShowing}}
+{{partial 'appointments/status'}}
 {{/if}}
 
 <p>{{#link-to 'customers'}}Customers{{/link-to}}</p>

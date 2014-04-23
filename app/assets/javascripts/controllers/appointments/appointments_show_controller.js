@@ -1,4 +1,4 @@
-DeluciaEmber.SessionsShowController = Ember.ObjectController.extend ({
+DeluciaEmber.AppointmentsShowController = Ember.ObjectController.extend ({
   isEditing: false,
 
   actions: {

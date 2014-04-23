@@ -1,9 +1,9 @@
 require 'spec_helper'
 
-describe Session do
-  let (:session) {FactoryGirl.build_stubbed(:session)}
+describe Appointment do
+  let (:Appointment) {FactoryGirl.build_stubbed(:appointment)}
 
-  subject { session }
+  subject { appointment }
 
   it { should respond_to :day}
   it { should respond_to :customer}

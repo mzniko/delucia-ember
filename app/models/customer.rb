@@ -1,3 +1,3 @@
 class Customer < ActiveRecord::Base
-  has_many :sessions
+  has_many :appointments
 end

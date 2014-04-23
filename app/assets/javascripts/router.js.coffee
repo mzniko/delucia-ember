@@ -4,8 +4,8 @@ DeluciaEmber.Router.map ->
   @resource 'customers', ->
     @route 'show',
       path: '/:customer_id'
-  @resource 'sessions', ->
+  @resource 'appointments', ->
     @route 'show',
-      path: '/:session_id'
+      path: '/:appointment_id'
   @route 'status'
   @route 'home'

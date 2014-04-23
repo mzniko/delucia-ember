@@ -12,7 +12,7 @@ describe Api::V1::AppointmentsController do
     it 'show' do
       @appointment = FactoryGirl.create(:appointment)
       get :show, id: @appointment.id
-      expect(assigns(:appointment).customer).to eq('MyString')
+      expect(assigns(:appointment).customer_id).to eq(1)
     end
   end
 

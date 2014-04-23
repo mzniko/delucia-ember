@@ -1,7 +1,7 @@
 module('Home integration', {
       setup: function () {
       DeluciaEmber.ApplicationAdapter = DS.FixtureAdapter;
-      DeluciaEmber.Session.FIXTURES = [
+      DeluciaEmber.Appointment.FIXTURES = [
               {
                   id: 1,
                   customer: 'Newguy McSouthEast',
@@ -30,11 +30,11 @@ test('Renders Home page', function () {
   });
 });
 
-test('Renders list of personal sessions', function () {
+test('Renders list of personal appointments', function () {
   visit('/home');
   andThen(function () {
-        var sessions_length = find('.sessions_list li').length;
-        equal(sessions_length, 4,
-        "Expected sessions to contain 4 items, got: " + sessions_length);
+        var appointments_length = find('.appointments_list li').length;
+        equal(appointments_length, 4,
+        "Expected appointments to contain 4 items, got: " + appointments_length);
     });
 });

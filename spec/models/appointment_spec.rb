@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Appointment do
-  let (:Appointment) {FactoryGirl.build_stubbed(:appointment)}
+  let (:appointment) {FactoryGirl.build_stubbed(:appointment)}
 
   subject { appointment }
 

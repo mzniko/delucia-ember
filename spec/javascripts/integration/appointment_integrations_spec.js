@@ -25,8 +25,8 @@ test('appointments index page', function () {
     visit('/appointments');
     andThen(function () {
       var header_text = find('.appointments_heading').text();
-      equal(header_text, "Now in the appointments Index",
-      'Expected "Now in the appointments Index", got: ' + header_text );
+      equal(header_text, "Now in the Appointments Index",
+      'Expected "Now in the Appointments Index", got: ' + header_text );
     });
 });
 

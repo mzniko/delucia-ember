@@ -9,6 +9,9 @@ gem 'jquery-rails'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'ember-rails'
 gem 'ember-source'
+gem 'bower-rails'
+gem 'devise'
+gem 'ember_devise_simple_auth'
 
 group :development do
   gem 'sqlite3'

@@ -12,11 +12,14 @@
                 {{input type ='text' value=controller.new_name id='new_name'}}
                 <label id="nc_label" for="new_email">Email</label>
                 {{input type ='text' value=controller.new_email id='new_email'}}
+                <label id="nc_label" for="new_name">Password</label>
+                {{input type ='form_control' value=controller.new_password id='new_password'}}
                 <button id="save_new_customer" {{action 'saveNewCustomer'}}>Save</button>
                 <button id="cancel_new_customer"{{action 'cancelNewCustomer'}}>Cancel</button>
               {{else}}
                 <button class="button small-centered" id="new_customer" {{action 'addNewCustomer'}}>Get Started</button>
               {{/if}}
+              {{#link-to 'sign-in'}}<button class="button small-centered" id="new_customer" >Sign In</button>{{/link-to}}
             </div>
           </div>
         </div>

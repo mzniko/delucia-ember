@@ -6,3 +6,8 @@ DeluciaEmber.Store = DS.Store.extend
   adapter: '-active-model'
 
 DS.RESTAdapter.reopen( namespace: "api/v1")
+
+$ ->
+  token = $("meta[name=\"csrf-token\"]").attr("content")
+  $.ajaxPrefilter (options, originalOptions, xhr) ->
+    xhr.setRequestHeader "X-CSRF-Token", token

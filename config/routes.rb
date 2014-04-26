@@ -11,7 +11,8 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      devise_for :customers, :controllers => { sessions: "ember_devise_simple_auth/sessions"}
+      devise_for :customers, :controllers => { sessions: "ember_devise_simple_auth/sessions",
+                                               registrations: "api/v1/customers" }
       resources :customers do
         resources :appointments
       end

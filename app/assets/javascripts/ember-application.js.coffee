@@ -5,8 +5,8 @@ window.DeluciaEmber = Ember.Application.create
   rootElement: '.ember-app'
   deviseSimpleAuth:
     userModelType: "customer"
-    deviseSignInPath: "/customers/sign_in"
-    deviseSignOutPath: "/customers/sign_out"
+    deviseSignInPath: "api/v1/customers/sign_in"
+    deviseSignOutPath: "api/v1/customers/sign_out"
 
 $ ->
   token = $("meta[name=\"csrf-token\"]").attr("content")

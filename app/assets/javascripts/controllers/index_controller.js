@@ -8,22 +8,22 @@ DeluciaEmber.IndexController = Ember.ArrayController.extend({
       this.toggleProperty('addingNewCustomer');
     },
     saveNewCustomer: function () {
-      var new_name = this.get('new_name');
-      var new_email = this.get('new_email');
-      var new_password = this.get('new_password');
+      var name = this.get('name');
+      var email = this.get('email');
+      var password = this.get('password');
 
-      var new_customer = this.store.createRecord('customer', {
-        name: new_name,
-        email: new_email,
-        password: new_password,
+      var customer = this.store.createRecord('customer', {
+        name: name,
+        email: email,
+        password: password,
       });
 
       var self = this;
-      new_customer.save().then(
+      customer.save().then(
         function () {
-          self.set('new_name', '');
-          self.set('new_email', '');
-          self.set('new_password', '');
+          self.set('name', '');
+          self.set('email', '');
+          self.set('password', '');
           self.toggleProperty('addingNewCustomer');
           self.transitionToRoute('/home')
         },
@@ -31,8 +31,8 @@ DeluciaEmber.IndexController = Ember.ArrayController.extend({
         });
     },
     cancelNewCustomer: function () {
-      this.set('new_name', '');
-      this.set('new_email', '');
+      this.set('name', '');
+      this.set('email', '');
       this.toggleProperty('addingNewCustomer');
     },
     status: function () {
